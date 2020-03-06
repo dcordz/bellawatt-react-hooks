@@ -1,11 +1,20 @@
-import React from 'react'
-import { useMyHook } from 'react-hooks'
+import React, { useState } from 'react'
+import { useDebounceEffect } from 'react-hooks'
 
 const App = () => {
-  const example = useMyHook()
+  const [textValue, setTextValue] = useState('')
+  const [exampleValue, setExampleValue] = useState(textValue);
+
+  useDebounceEffect(() => {
+    setExampleValue(textValue);
+  }, 2000, [textValue]);
+
   return (
     <div>
-      {example}
+      <h2>Debounce Test</h2>
+      <input type="text" value={textValue} onChange={e => setTextValue(e.currentTarget.value)} />
+      <p>{textValue}</p>
+      <p>{exampleValue}</p>
     </div>
   )
 }

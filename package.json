@@ -1,10 +1,10 @@
 {
-  "name": "react-hooks",
+  "name": "@bellawatt/react-hooks",
   "version": "1.0.0",
   "description": "A collection of hooks we find ourselves turning to in multiple projects",
-  "author": "bellawatt",
+  "author": "@BrandonShar",
   "license": "MIT",
-  "repository": "bellawatt/react-hooks",
+  "repository": "@bellawatt/react-hooks",
   "main": "dist/index.js",
   "module": "dist/index.es.js",
   "jsnext:main": "dist/index.es.js",
