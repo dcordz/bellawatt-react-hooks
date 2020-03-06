@@ -7,7 +7,7 @@
 ## Install
 
 ```bash
-npm install --save react-hooks
+npm install --save @bellawatt/react-hooks
 ```
 
 ## Usage
@@ -15,7 +15,7 @@ npm install --save react-hooks
 ```jsx
 import React, { useState } from 'react'
 import axios from 'axios';
-import { useDebounceEffect } from 'react-hooks'
+import { useDebounceEffect } from '@bellawatt/react-hooks'
 
 const DebounceEffectExample = () => {
   const [value, setValue] = useState('');
