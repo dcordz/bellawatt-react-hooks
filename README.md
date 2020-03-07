@@ -12,6 +12,8 @@ npm install --save @bellawatt/react-hooks
 
 ## Usage
 
+### useDebounceEffect
+
 ```jsx
 import React, { useState } from 'react'
 import axios from 'axios';
@@ -28,6 +30,24 @@ const DebounceEffectExample = () => {
     <div>
       <input value={value} onChange={e => setValue(e.currentTarget.value)} />
     </div>
+  )
+}
+```
+
+### useToggle
+
+```jsx
+import React from 'react'
+import { useToggle } from '@bellawatt/react-hooks'
+import { Modal } from 'reactstrap'
+
+const ToggleExample = () => {
+  const [open, toggle] = useToggle(false)
+
+  return (
+    <Modal isOpen={open} toggle={toggle}>
+      ...
+    </Modal>
   )
 }
 ```
