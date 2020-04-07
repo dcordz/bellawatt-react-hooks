@@ -22,7 +22,9 @@
     "deploy": "gh-pages -d example/build"
   },
   "peerDependencies": {
-    "react": "^16.9.0"
+    "react": "^16.9.0",
+    "react-router-dom": "^5.1.2",
+    "react-ga": "^2.7.0"
   },
   "devDependencies": {
     "@babel/core": "^7.0.0",

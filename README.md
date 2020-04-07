@@ -52,6 +52,34 @@ const ToggleExample = () => {
 }
 ```
 
+### useLocalStorage
+
+```jsx
+import React from 'react'
+import { useLocalStorage } from '@bellawatt/react-hooks'
+
+const LocalStorageExample = () => {
+  const [storedData, setStoredData] = useLocalStorage('name-of-key')
+
+  // ..
+}
+```
+
+### useGoogleAnalytics
+
+** Requires a peer of react-router-dom and react-ga **
+
+```jsx
+import React from 'react'
+import { useGoogleAnalytics } from '@bellawatt/react-hooks'
+
+const GoogleAnalyticsExample = () => {
+  useGoogleAnalytics('google-key')
+
+  // ..
+}
+```
+
 ## License
 
 MIT © [bellawatt](https://github.com/bellawatt)
