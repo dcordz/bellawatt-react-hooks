@@ -80,6 +80,21 @@ const GoogleAnalyticsExample = () => {
 }
 ```
 
+### useQueryString
+
+** Requires a peer of react-router-dom **
+
+```jsx
+import React from 'react'
+import { useQueryString } from '@bellawatt/react-hooks'
+
+const QueryStringExample = () => {
+  const [urlInputs, updateQueryString] = useQueryString()
+
+  // ..
+}
+```
+
 ## License
 
 MIT © [bellawatt](https://github.com/bellawatt)

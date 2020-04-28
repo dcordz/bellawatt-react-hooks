@@ -1,14 +1,16 @@
 import React, { useState } from 'react'
-import { useDebounceEffect, useToggle } from 'react-hooks'
+import { useDebounceEffect, useToggle, useQueryString } from 'react-hooks'
 
 const App = () => {
   const [textValue, setTextValue] = useState('')
-  const [exampleValue, setExampleValue] = useState(textValue);
-  const [onOff, toggle] = useToggle(false);
+  const [exampleValue, setExampleValue] = useState(textValue)
+  const [onOff, toggle] = useToggle(false)
+  const [queryString, updateQueryString] = useQueryString()
 
   useDebounceEffect(() => {
-    setExampleValue(textValue);
-  }, 2000, [textValue]);
+    setExampleValue(textValue)
+    updateQueryString({text: textValue})
+  }, 2000, [textValue])
 
   return (
     <div>
@@ -18,6 +20,9 @@ const App = () => {
       <p>{exampleValue}</p>
       <h2>Toggle Test</h2>
       <button style={{width: '100px', height: '100px', backgroundColor: onOff ? 'green' : 'red'}} onClick={toggle}>{onOff ? 'On' : 'Off'}</button>
+    
+      <h2>Query String Test</h2>
+      <p>{JSON.stringify(queryString)}</p>
     </div>
   )
 }
