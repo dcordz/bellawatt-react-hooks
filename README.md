@@ -67,7 +67,7 @@ const LocalStorageExample = () => {
 
 ### useGoogleAnalytics
 
-** Requires a peer of react-router-dom and react-ga **
+** Requires a peer of react-router-dom **
 
 ```jsx
 import React from 'react'
